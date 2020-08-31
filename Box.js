@@ -14,9 +14,16 @@ class Box{
     }
     display(){
         //giving the physical shape to the body on the canvas
-        //console.log(this.box.angle);
-        //var angle=this.box.angle;
+        console.log(this.box.angle);
+        var angle=this.box.angle;
+
+        push();
+        translate(this.box.position.x,this.box.position.y)
+        rotate(angle);
+        stroke("brown");
+        fill("green");
         rectMode(CENTER);
-        rect(this.box.position.x,this.box.position.y,this.width,this.height);
+        rect(0,0,this.width,this.height);
+        pop();
     }
 }
